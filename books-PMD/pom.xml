@@ -9,27 +9,6 @@
       <sourceDirectory>src</sourceDirectory>
       <plugins>
          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-pmd-plugin</artifactId>
-            <version>3.20.0</version>
-            <configuration>
-               <!-- failOnViolation is actually true by default, but can be disabled -->
-               <failOnViolation>false</failOnViolation>
-               <!-- printFailingErrors is pretty useful -->
-               <printFailingErrors>true</printFailingErrors>
-               <rulesets>
-                  <ruleset>D:\JavaRule.xml</ruleset>
-               </rulesets>
-            </configuration>
-            <executions>
-               <execution>
-                  <goals>
-                     <goal>check</goal>
-                  </goals>
-               </execution>
-            </executions>
-         </plugin>
-         <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.8.0</version>
             <configuration>
@@ -44,21 +23,21 @@
                <warSourceDirectory>WebContent</warSourceDirectory>
             </configuration>
          </plugin>
-          <plugin>
-				<groupId>org.owasp</groupId>
-				<artifactId>dependency-check-maven</artifactId>
-				<version>8.1.2</version>
-				 <configuration>
-                  <formats>JSON,HTML</formats>
-              </configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+         <plugin>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>8.1.2</version>
+            <configuration>
+               <formats>JSON,HTML</formats>
+            </configuration>
+            <executions>
+               <execution>
+                  <goals>
+                     <goal>check</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
       </plugins>
    </build>
    <dependencies>
@@ -78,4 +57,4 @@
          <version>3.1.0</version>
       </dependency>
    </dependencies>
-               </project>
+</project>
