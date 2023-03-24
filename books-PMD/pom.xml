@@ -29,6 +29,7 @@
             <version>8.1.2</version>
             <configuration>
                <formats>JSON,HTML</formats>
+               <failBuildOnAnyVulnerability>true</failBuildOnAnyVulnerability>
             </configuration>
             <executions>
                <execution>
